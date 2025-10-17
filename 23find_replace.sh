@@ -2,14 +2,9 @@
 
 #!/bin/bash
 
-if [ "$#" -ne 3 ]; then
-    echo "Usage: $0 /path/to/directory \"search_text\" \"replace_text\""
-    exit 1
-fi
-
-DIRECTORY=$1
-SEARCH=$2
-REPLACE=$3
+read -p "Enter The Path of File : " DIRECTORY
+read -p "Enter The Word To Replace " SEARCH
+raed -p "Enter The New Word To Replace:" REPLACE
 
 for FILE in "$DIRECTORY"/*; do
     if [ -f "$FILE" ]; then
