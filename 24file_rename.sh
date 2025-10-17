@@ -1,4 +1,3 @@
-root@localhost task2]# cat 24_file_rename.sh
 #!/bin/bash
 
 read -p "Enter directory path: " DIR
