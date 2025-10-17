@@ -1,0 +1,11 @@
+#!/bin/bash
+
+read -p "Enter a specified directory path :" path
+read -p "Enter a Remote Server Username : " user
+read -p "Enter a Remote Server Ip Address :" remote_ip
+read -p "Enter a path to save the files in Remote Server : " remote_path
+
+rsync -avz -e ssh $path $user@$remote_ip:$remote_path
+
+#Edit the cron jobs: crontab -e
+#Add a line like this to run it daily at midnight: 0 0 * * * /remote_sync.sh
